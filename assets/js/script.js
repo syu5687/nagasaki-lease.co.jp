@@ -67,4 +67,22 @@ $(document).ready(function () {
     $(window).on('load', function (event) {
         fixHeightQuestion();
     });
+    
+   // ページ読み込み時にURLパラメータやハッシュを取得
+   window.addEventListener('DOMContentLoaded', function() {
+     // 方法A：クエリで渡した場合
+     const params = new URLSearchParams(window.location.search);
+     const section = params.get('section'); // ?section=access
+     if (section) {
+       const el = document.getElementById(section);
+       if (el) el.classList.add('active');
+     }
+   
+     // 方法B：ハッシュで渡した場合
+     const hash = window.location.hash; // #faq
+     if (hash) {
+       const el = document.querySelector(hash);
+       if (el) el.classList.add('active');
+     }
+   });
 });
