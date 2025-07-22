@@ -36,6 +36,38 @@ $(document).ready(function () {
         }
         return false;
     });
+    
+    $(function () {
+      const hash = window.location.hash;
+    
+      // エリアが1つの場合（areaTabが1セット）の処理
+      const $areaTab = $(".areaTab");
+    
+      if (hash && $(hash).length > 0 && $areaTab.find(hash).length > 0) {
+        // 該当のタブ内容が存在するとき（正常パターン）
+    
+        $areaTab.find(".tabBox").removeClass("showTab");
+        $areaTab.find(hash).addClass("showTab");
+    
+        $areaTab.find(".listTab li").removeClass("active");
+        $areaTab.find('.listTab li a[href="' + hash + '"]').parent().addClass("active");
+    
+      } else {
+        // ハッシュが無効なとき → 最初のタブを開く
+    
+        // 最初のタブリンクのhrefを取得
+        const $firstTabLink = $areaTab.find(".listTab li a").first();
+        const firstHref = $firstTabLink.attr("href");
+    
+        if (firstHref && $areaTab.find(firstHref).length > 0) {
+          $areaTab.find(".tabBox").removeClass("showTab");
+          $areaTab.find(firstHref).addClass("showTab");
+    
+          $areaTab.find(".listTab li").removeClass("active");
+          $firstTabLink.parent().addClass("active");
+        }
+      }
+    });
 
     if ($(window).width() > 768) {
         function fixHeightQuestion(entryNumber = null) {
