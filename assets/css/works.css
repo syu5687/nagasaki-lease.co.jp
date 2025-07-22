@@ -1,0 +1,104 @@
+.areaWork {
+    padding: 39px 0;
+    margin-bottom: 89px;
+}
+
+.areaWork .listTab {
+    margin-bottom: 63px;
+}
+
+.areaWork .tabBox .titleBox {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.areaWork .tabBox .itemBox {
+    width: 113px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 auto;
+    background: #000000;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 3px 0;
+    margin-bottom: 113px;
+}
+
+.areaWork .workTxt {
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 832px;
+    margin: 0 auto;
+    line-height: 1.88;
+    text-align: justify;
+}
+
+.areaWork .listPhoto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-bottom: 23px;
+}
+
+.areaWork .listPhoto li {
+    width: 48.8%;
+    margin-bottom: 20px;
+}
+
+@media(min-width:769px) {
+
+    .areaWork .areaTitle {
+        margin-bottom: 54px;
+    }
+}
+
+@media(max-width:768px) {
+    .areaWork .listTab {
+        margin-bottom: 60px;
+    }
+
+    .areaWork .tabBox .itemBox {
+        margin-bottom: 50px;
+    }
+
+    .areaWork .listPhoto {
+        margin-top: 70px;
+    }
+}
+
+@media(max-width:430px) {
+    .areaWork {
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .areaWork .listTab {
+        margin-bottom: 30px;
+    }
+
+    .areaWork .tabBox .titleBox {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .areaWork .tabBox .itemBox {
+        margin-bottom: 40px;
+    }
+
+    .areaWork .workTxt {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .areaWork .listPhoto {
+        margin-top: 40px;
+    }
+
+    .areaWork .listPhoto li {
+        margin-bottom: 10px;
+    }
+}

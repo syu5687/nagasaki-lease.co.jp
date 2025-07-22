@@ -1,0 +1,122 @@
+/* ...existing code... */
+
+.areaAbout {
+    padding: 80px 0 128px;
+}
+
+.areaAbout .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.areaAbout .areaTitle {
+    margin-bottom: 92px;
+}
+
+.areaAbout .listInfo {
+    max-width: 720px;
+    margin: 0 auto 113px;
+}
+
+.areaAbout .listInfo li {
+    display: flex;
+    font-size: 16px;
+    border-bottom: 1px solid #000000;
+    font-weight: 500;
+    padding-bottom: 31px;
+    margin-bottom: 40px;
+}
+
+.areaAbout .listInfo li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.areaAbout .listInfo .name {
+    font-weight: bold;
+    width: 171px;
+    padding-left: 59px;
+    margin-right: 121px;
+}
+
+.areaAbout .listInfo .name span {
+    display: block;
+    text-align: right;
+    margin-top: 46px;
+}
+
+.areaAbout .listInfo .txt {
+    width: calc(100% - 292px);
+    line-height: 1.87;
+}
+
+.areaAbout .listInfo .txt span {
+    position: relative;
+    display: block;
+    padding-left: 16px;
+}
+
+.areaAbout .listInfo .txt span::before {
+    content: "●";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.areaAbout .listInfo .txt a {
+    color: #000;
+}
+
+@media(min-width:769px) {
+    .areaAbout .listInfo .txt a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media(max-width:768px) {
+    .areaAbout .listInfo .name {
+        width: 150px;
+        margin-right: 50px;
+        padding-left: 30px;
+    }
+
+    .areaAbout .listInfo .txt {
+        width: calc(100% - 200px);
+    }
+}
+
+@media(max-width:430px) {
+    .areaAbout {
+        padding: 30px 0 40px;
+    }
+
+    .areaAbout .areaTitle {
+        margin-bottom: 25px;
+    }
+
+    .areaAbout .listInfo {
+        margin-bottom: 50px;
+    }
+
+    .areaAbout .listInfo li {
+        font-size: 14px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .areaAbout .listInfo .name {
+        width: 100px;
+        padding-left: 0;
+        margin-right: 20px;
+    }
+
+    .areaAbout .listInfo .name span {
+        margin-top: 25px;
+    }
+
+    .areaAbout .listInfo .txt {
+        width: calc(100% - 120px);
+        line-height: 1.6;
+    }
+}

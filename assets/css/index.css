@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/***************************************************************************
+*
+* INDEX STYLE
+*
+***************************************************************************/
+
+#main {
+    padding-top: 57px;
+}
+
+/* areaRental */
+.areaRental {
+    padding: 27px 0;
+    margin-bottom: 54px;
+}
+
+.areaRental .rentalIntro {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 46px;
+}
+
+.areaRental .listRental {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 53px;
+}
+
+.areaRental .listRental li {
+    width: calc(100% / 4 - 23px);
+}
+
+.areaRental .listRental li+li {
+    margin-left: 30px;
+}
+
+.areaRental .listRental li a {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 100%;
+    padding-bottom: 19px;
+}
+
+.areaRental .listRental li a .titleBox {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 8px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.areaRental .listRental li a .rentalPhoto {
+    margin-bottom: 10px;
+}
+
+.areaRental .listRental li a .rentalTxt {
+    line-height: 1.2;
+    padding: 0 4px 0 10px;
+    margin-bottom: 34px;
+}
+
+.areaRental .listRental li a .viewDetails {
+    position: relative;
+    display: flex;
+    margin-top: auto;
+    padding-left: 9px;
+    padding-bottom: 2px;
+    transition: all .3s;
+}
+
+.areaRental .listRental li a .viewDetails::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 93%;
+    height: 12px;
+    background: url(../images/index/rental-arrow.svg) no-repeat bottom left/100%;
+    transition: all .3s;
+}
+
+@media(min-width:769px) {
+    .areaRental .listRental li a:hover {
+        background: #f7f7f7;
+        box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    }
+}
+
+@media(max-width:980px) and (min-width:769px) {
+    .areaRental .listRental li a .titleBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .areaRental .listRental li {
+        width: calc(100% / 4 - 20px);
+    }
+
+    .areaRental .listRental li+li {
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:768px) {
+    #main {
+        padding-top: 0;
+    }
+
+    #main .mainPhoto img {
+        aspect-ratio: 375 / 230;
+    }
+
+    .areaRental {
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .areaRental .rentalIntro {
+        margin-bottom: 40px;
+    }
+
+    .areaRental .listRental {
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .areaRental .listRental li {
+        width: 48%;
+        margin: 0 0 20px;
+        box-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+    }
+
+    .areaRental .listRental li+li {
+        margin-left: 0;
+    }
+
+    .areaRental .listRental li a .viewDetails::before {
+        height: 9px;
+    }
+
+    .areaRental .rentalMainPhoto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 375 / 130;
+    }
+}
+
+@media(max-width:430px) {
+    .areaRental .rentalIntro {
+        font-size: 18px;
+    }
+
+    .areaRental .listRental li {
+        width: 100%;
+    }
+
+    .areaRental .listRental li a {
+        padding: 10px 0 15px;
+    }
+}
