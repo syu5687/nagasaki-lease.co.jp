@@ -36,26 +36,27 @@ $(document).ready(function () {
         }
         return false;
     });
-    
     $(function () {
       const hash = window.location.hash;
     
-      // エリアが1つの場合（areaTabが1セット）の処理
       const $areaTab = $(".areaTab");
     
       if (hash && $(hash).length > 0 && $areaTab.find(hash).length > 0) {
-        // 該当のタブ内容が存在するとき（正常パターン）
+        // ハッシュが有効で、該当の.tabBoxが存在する場合
     
         $areaTab.find(".tabBox").removeClass("showTab");
         $areaTab.find(hash).addClass("showTab");
     
         $areaTab.find(".listTab li").removeClass("active");
-        $areaTab.find('.listTab li a[href="' + hash + '"]').parent().addClass("active");
+    
+        // ハッシュと一致する a[href="#tab1"] を持つ <li> に active をつける
+        $areaTab.find('.listTab li a[href="' + hash + '"]')
+                .parent("li")
+                .addClass("active");
     
       } else {
-        // ハッシュが無効なとき → 最初のタブを開く
+        // ハッシュが不正 or 未指定 → 最初のタブを開く（フォールバック）
     
-        // 最初のタブリンクのhrefを取得
         const $firstTabLink = $areaTab.find(".listTab li a").first();
         const firstHref = $firstTabLink.attr("href");
     
@@ -64,7 +65,7 @@ $(document).ready(function () {
           $areaTab.find(firstHref).addClass("showTab");
     
           $areaTab.find(".listTab li").removeClass("active");
-          $firstTabLink.parent().addClass("active");
+          $firstTabLink.parent("li").addClass("active");
         }
       }
     });
@@ -99,22 +100,4 @@ $(document).ready(function () {
     $(window).on('load', function (event) {
         fixHeightQuestion();
     });
-    
-   // ページ読み込み時にURLパラメータやハッシュを取得
-   window.addEventListener('DOMContentLoaded', function() {
-     // 方法A：クエリで渡した場合
-     const params = new URLSearchParams(window.location.search);
-     const section = params.get('section'); // ?section=access
-     if (section) {
-       const el = document.getElementById(section);
-       if (el) el.classList.add('active');
-     }
-   
-     // 方法B：ハッシュで渡した場合
-     const hash = window.location.hash; // #faq
-     if (hash) {
-       const el = document.querySelector(hash);
-       if (el) el.classList.add('active');
-     }
-   });
 });
