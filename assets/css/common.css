@@ -220,13 +220,6 @@ body.fixed {
     letter-spacing: 0;
 }
 
-.pc{
-    display: block;
-}
-
-.sp{
-    display: none;
-}
 
 @media (min-width: 769px) {
     .sp {
