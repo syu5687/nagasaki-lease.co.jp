@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>フェア登録・編集</title>
+  <link href="dist/css/coreui.min.css" rel="stylesheet">
+</head>
+<body class="bg-light p-4">
+  <div class="container">
+	<h1 class="mb-4">ブライダルフェア 登録・編集</h1>
+	<form>
+	  <div class="mb-3">
+		<label class="form-label">開催日</label>
+		<input type="date" class="form-control" name="date">
+	  </div>
+	  <div class="mb-3">
+		<label class="form-label">フェア名</label>
+		<input type="text" class="form-control" name="title">
+	  </div>
+	  <div class="mb-3">
+		<label class="form-label">会場</label>
+		<input type="text" class="form-control" name="location">
+	  </div>
+	  <div class="mb-3">
+		<label class="form-label">概要</label>
+		<textarea class="form-control" name="description" rows="4"></textarea>
+	  </div>
+	  <div class="mb-3">
+		<label class="form-label">画像</label>
+		<input type="file" class="form-control" name="image">
+	  </div>
+	  <button type="submit" class="btn btn-success">保存</button>
+	  <a href="fair-list.html" class="btn btn-secondary">戻る</a>
+	</form>
+  </div>
+  <script src="dist/js/coreui.bundle.min.js"></script>
+</body>
+</html>
