@@ -34,7 +34,7 @@
 }
 
 .areaRental .listRental li+li {
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .areaRental .listRental li a {
@@ -94,16 +94,17 @@
     .areaRental .listRental li a .titleBox {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .areaRental .listRental li {
         width: calc(100% / 4 - 20px);
+        margin-bottom: 15px;
     }
 
-    .areaRental .listRental li+li {
+    /* .areaRental .listRental li+li {
         margin-left: 20px;
-    }
+    } */
 }
 
 @media(max-width:768px) {
