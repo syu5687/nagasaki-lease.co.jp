@@ -1,0 +1,18 @@
+table {
+  /* 二重線を1本の線にまとめる */
+  border-collapse: collapse;
+  /* テーブル全体の幅を指定 */
+  width: 100%;
+}
+
+th, td {
+  /* 枠線をひく */
+  border: 1px solid #ccc;
+  /* 文字と枠線の間の余白（詰まりすぎを防ぐ） */
+  padding: 8px 12px;
+}
+
+th {
+  /* 見出し（th）に背景色をつける */
+  background-color: #f4f4f4;
+}
