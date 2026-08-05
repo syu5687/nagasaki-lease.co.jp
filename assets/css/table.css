@@ -73,3 +73,19 @@ table td ul.list01-li li {
 table td ul.list01-li li:last-child {
   margin-bottom: 0;
 }
+@media screen and (max-width: 640px) {
+  table th, table td {
+    display: block;
+    width: 100%;
+  }
+  table th {
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+  }
+  table td {
+    padding: 10px 15px 15px 15px;
+  }
+  th .txt03 {
+    margin-left: 0; /* スマホではインデントを解除 */
+  }
+}
