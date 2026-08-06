@@ -1,91 +1,77 @@
-/* --- 会社概要ヘッダー（画像上部の青いバー） --- */
-.company-header {
-  background-color: #386f9a; /* 画像の落ち着いた青色 */
-  color: #ffffff;
-  padding: 12px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 0;
+/* テーブル全体のスタイル */
+.aboutTableWrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-/* --- テーブル全体の設定 --- */
-table {
+.aboutTable {
   width: 100%;
   border-collapse: collapse;
-  font-family: "Hiragino Sans", "メイリオ", sans-serif;
-  color: #333333;
-  font-size: 14px;
+  background-color: #ffffff;
+  border-top: 2px solid #2b3a4a; /* テーブル上面の上品なアクセントライン */
+}
+
+/* 行（Row）の区切り線 */
+.aboutTable tr {
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* 項目名（左側） */
+.aboutTable th {
+  width: 28%;
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* 行（tr）ごとの下枠線 */
-table tr {
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* 見出しセル（th） */
-table th {
-  background-color: #ededed; /* ライトグレー背景 */
-  width: 25%;               /* 幅の割合 */
+/* 値・本文（右側） */
+.aboutTable td {
+  width: 72%;
   padding: 16px 20px;
+  color: #475569;
   text-align: left;
-  vertical-align: middle;
-  font-weight: normal;       /* 必要に応じて bold に調整可 */
-  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
-/* データセル（td） */
-table td {
-  background-color: #ffffff; /* 白背景 */
-  width: 75%;
-  padding: 16px 20px;
-  vertical-align: middle;
-  box-sizing: border-box;
+/* マウスホバー時にうっすら色を変える効果（操作感の向上） */
+.aboutTable tr:hover {
+  background-color: #f1f5f9;
 }
 
-/* --- 所在地・工場の特殊レイアウト（txt01, txt02, txt03） --- */
-th .txt01 {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-th .txt02,
-th .txt03 {
-  display: inline-block;
-}
-
-/* 工場の行の見出し位置調整（「所在地」の幅に合わせて右寄せ風にする場合） */
-th .txt03 {
-  margin-left: 62px; /* 「所在地」の文字幅＋余白分空ける調整 */
-}
-
-/* --- リスト表示（営業品目・取引銀行）のリセット・装飾 --- */
-table td ul.list01-li {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-table td ul.list01-li li {
-  margin-bottom: 12px;
-}
-
-table td ul.list01-li li:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 640px) {
-  table th, table td {
+/* -----------------------------------
+ * スマホ対応（レスポンシブ）
+ * 画面幅768px以下で縦並び化
+ * ----------------------------------- */
+@media screen and (max-width: 768px) {
+  .aboutTable th,
+  .aboutTable td {
     display: block;
     width: 100%;
   }
-  table th {
-    background-color: #f5f5f5;
-    padding: 10px 15px;
+
+  .aboutTable th {
+    padding-bottom: 6px;
+    background-color: transparent;
+    color: #1e293b;
+    font-size: 0.9rem;
   }
-  table td {
-    padding: 10px 15px 15px 15px;
+
+  .aboutTable td {
+    padding-top: 4px;
+    padding-bottom: 18px;
   }
-  th .txt03 {
-    margin-left: 0; /* スマホではインデントを解除 */
+
+  .aboutTable tr {
+    display: block;
+    padding-top: 10px;
   }
 }
